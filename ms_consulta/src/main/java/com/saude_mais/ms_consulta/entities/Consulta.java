@@ -7,6 +7,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
@@ -18,8 +20,8 @@ public class Consulta {
     @Id 
     private String id;
 
-    private String nomePac;
-    private String dataConsulta;
+    private String idPac;
+    private Date dataConsulta;
     private String nomeMedico;
     private String especialidadeMedico;
     

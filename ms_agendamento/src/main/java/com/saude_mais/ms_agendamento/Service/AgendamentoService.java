@@ -32,6 +32,10 @@ public class AgendamentoService {
         return repo.save(obj);
     }
 
+    public Agendamento update(Agendamento agendamento){
+        return repo.save(agendamento);
+    }
+
     public void delAgendamento(String id){
         repo.deleteById(id);
     }

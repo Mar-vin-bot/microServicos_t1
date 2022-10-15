@@ -38,6 +38,11 @@ public class AgendamentoContoller {
     }
 
     @PutMapping
+    public Agendamento updateAgendamento (@RequestBody Agendamento agendamento){
+        return service.update(agendamento);
+    }
+
+    @PutMapping("/id")
     public Agendamento updateAgendamento (String id, Agendamento obj){
         return service.upAgendamento(id, obj);
     }
