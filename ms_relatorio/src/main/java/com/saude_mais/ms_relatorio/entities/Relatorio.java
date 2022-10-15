@@ -9,15 +9,17 @@ import javax.persistence.Id;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document(collection = "relatorio"
+@Document(collection = "relatorio")
         
 public class Relatorio {
 
     @Id
     private String id;
+
     private String nomePac;
     private String nomeMed;
     private String dtConsulta;
+    private String dtAgendamento;
     private String especialidadeMed;
 
 

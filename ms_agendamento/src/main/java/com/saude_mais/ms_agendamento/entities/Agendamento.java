@@ -20,7 +20,7 @@ public class Agendamento {
 @Id
 private String id;
 private String idPac;
-private Date dataConsulta;
+private String dataConsulta;
 private String nomeMedico;
 private String especialidadeMedico;
 

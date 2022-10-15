@@ -21,8 +21,8 @@ public class Consulta {
     private String id;
 
     private String idPac;
-    private Date dataConsulta;
-    private String nomeMedico;
+    private String dtConsulta;
+    private String nomeMed;
     private String especialidadeMedico;
     
 }
