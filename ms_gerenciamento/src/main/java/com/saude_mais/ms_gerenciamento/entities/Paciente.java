@@ -1,5 +1,7 @@
 package com.saude_mais.ms_gerenciamento.entities;
 
+import java.util.List;
+
 import javax.persistence.Id;
 
 import lombok.AllArgsConstructor;
@@ -19,5 +21,7 @@ public class Paciente  {
     private String tel;
     private String dtNasci;
     private String ocupacao;
+    
+    private List <Consulta> consulta;
     
 }

@@ -10,7 +10,7 @@ import com.saude_mais.ms_consulta.Service.ConsultaService;
 import com.saude_mais.ms_consulta.entities.Consulta;
 
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+
 import org.springframework.web.bind.annotation.PathVariable;
 
 

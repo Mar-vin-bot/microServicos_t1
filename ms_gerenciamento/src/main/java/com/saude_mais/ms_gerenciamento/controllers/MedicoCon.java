@@ -29,24 +29,24 @@ public class MedicoCon {
     }
 
     @GetMapping
-    public List <Medico> getAllObjetos(){
+    public List <Medico> getAll(){
         return service.findAll();
     }
 
     @PostMapping
-    public Medico createNewObj(@RequestBody Medico obj){
-        return service.newAgendamento(obj); 
+    public Medico create(@RequestBody Medico obj){
+        return service.save(obj); 
     }
 
     @PutMapping
-    public Medico updateObj (@RequestBody Medico obj){
+    public Medico update (@RequestBody Medico obj){
         return service.update(obj);
     }
 
 
     @DeleteMapping("/{id}")
     public void delById(@PathVariable String id){
-        service.delMedico(id);
+        service.delete(id);
     }
     
 }

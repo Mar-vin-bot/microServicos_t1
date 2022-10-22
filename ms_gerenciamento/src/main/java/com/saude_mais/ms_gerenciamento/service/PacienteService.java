@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 
+
 import com.saude_mais.ms_gerenciamento.entities.Paciente;
 import com.saude_mais.ms_gerenciamento.repositorie.PacienteRepo;
 
@@ -32,6 +33,8 @@ public class PacienteService {
     public void delMedico(String id){
         repo.deleteById(id);
     }
+
+
     
     
 }
