@@ -22,12 +22,14 @@ public class ConsultaController {
     private ConsultaService service;
 
     @GetMapping(value="{id}")
-    public Consulta getFindById(@PathVariable String id) {
+    public Consulta getById(@PathVariable String id) 
+    {
         return service.findById(id).orElseThrow(() -> new ConsultaNotFoundException(id));
     }
 
     @GetMapping
-    public List<Consulta> getFindAll(){
+    public List<Consulta> getAll()
+    {
         return service.findAll();
     }
     

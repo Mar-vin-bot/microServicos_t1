@@ -1,4 +1,5 @@
 package com.saude_mais.ms_relatorio.entities;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,9 +7,11 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+public class Consulta {
 
-public class RelatorioMedicos {
-    private List<Medico> medicos;
+    private String id;
+    private String nomePac;
+    private String nomeMed;
+    private String dtColsulta;
+    
 }
-
-

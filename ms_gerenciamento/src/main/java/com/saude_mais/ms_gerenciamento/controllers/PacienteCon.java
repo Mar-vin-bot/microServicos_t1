@@ -28,7 +28,7 @@ public class PacienteCon {
     }
 
     @GetMapping
-    public List <Paciente> getAllObjetos(){
+    public List <Paciente> getAll(){
         return service.findAll();
     }
 

@@ -4,11 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
 
 import com.saude_mais.ms_gerenciamento.entities.Paciente;
 import com.saude_mais.ms_gerenciamento.repositorie.PacienteRepo;
 
+@Service
 public class PacienteService {
 
     @Autowired

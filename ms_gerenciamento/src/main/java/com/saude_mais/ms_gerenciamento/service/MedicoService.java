@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.saude_mais.ms_gerenciamento.entities.Medico;
 import com.saude_mais.ms_gerenciamento.repositorie.MedicoRepo;
+import org.springframework.stereotype.Service;
 
+@Service
 public class MedicoService {
 
     @Autowired
@@ -21,7 +23,7 @@ public class MedicoService {
         return repo.findById(id);
     }
 
-    public Medico newObj (Medico obj){
+    public Medico save (Medico obj){
         return repo.save(obj);
     }
 
@@ -29,7 +31,7 @@ public class MedicoService {
         return repo.save(agendamento);
     }
 
-    public void delMedico(String id){
+    public void delete(String id){
         repo.deleteById(id);
     }
     

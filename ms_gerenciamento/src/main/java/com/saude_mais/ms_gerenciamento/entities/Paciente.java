@@ -7,11 +7,12 @@ import javax.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
-
+@NoArgsConstructor
+@Document(collection = "paciente")
 public class Paciente  {
 
     @Id
@@ -21,7 +22,6 @@ public class Paciente  {
     private String tel;
     private String dtNasci;
     private String ocupacao;
-    
     private List <Consulta> consulta;
     
 }

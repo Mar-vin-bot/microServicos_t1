@@ -9,13 +9,13 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Medico {
+public class Paciente {
 
     private String id;
-    private String nomeMed;
-    private String crm;
-    private String especialidade;
-    private String turnoAtendimento;
+    private String nomePac;
+    private String tel;
+    private String dtNasci;
+    private String ocupacao;
+    private List<Consulta> consulta;
 
-    private List<Agendamento> agendamento;
 }

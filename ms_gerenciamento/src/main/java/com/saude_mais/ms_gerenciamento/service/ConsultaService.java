@@ -7,7 +7,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.saude_mais.ms_gerenciamento.entities.Consulta;
 import com.saude_mais.ms_gerenciamento.repositorie.ConsultaRepo;
+import org.springframework.stereotype.Service;
 
+@Service
 public class ConsultaService {
 
     @Autowired

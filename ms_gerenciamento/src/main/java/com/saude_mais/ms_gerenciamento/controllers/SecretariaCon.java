@@ -19,9 +19,6 @@ import com.saude_mais.ms_gerenciamento.service.SecretariaService;
 @RequestMapping("/secretaria")
 public class SecretariaCon {
 
-
-
-
     @Autowired
     SecretariaService service;
 
@@ -44,7 +41,6 @@ public class SecretariaCon {
     public Secretaria updateObj (@RequestBody Secretaria obj){
         return service.update(obj);
     }
-
 
     @DeleteMapping("/{id}")
     public void delById(@PathVariable String id){

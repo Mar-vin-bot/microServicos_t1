@@ -1,32 +1,45 @@
 package com.saude_mais.ms_relatorio.service;
 
-import com.saude_mais.ms_relatorio.entities.Relatorio;
-import com.saude_mais.ms_relatorio.entities.RelatorioMedicos;
-import com.saude_mais.ms_relatorio.repositorie.RelatorioRepo;
+import com.saude_mais.ms_relatorio.entities.Agendamento;
+import com.saude_mais.ms_relatorio.entities.Consulta;
+import com.saude_mais.ms_relatorio.entities.Medico;
+import com.saude_mais.ms_relatorio.entities.Paciente;
+import com.saude_mais.ms_relatorio.feigns.GerenciamentoFeignMedico;
+import com.saude_mais.ms_relatorio.feigns.GerenciamentoFeignPaciente;
 
 import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class RelatorioService {
 
     @Autowired
-    RelatorioRepo repo;
+    GerenciamentoFeignMedico feignMedico;
 
-    public List<Relatorio> findByDtAgendamentoWhitNomeMed(String nomeMed, String dtAgendamento){
-        return repo.findByDtAgendamentoWhitNomeMed(nomeMed, dtAgendamento);
+    @Autowired
+    GerenciamentoFeignPaciente feignPaciente;
+
+    public List<Medico> getRelatorioMedicos()
+    {
+        return feignMedico.getAll();
     }
 
-    public List<RelatorioMedicos> allMedicos(){
-        return null;
+    public List<Agendamento> getAgendamentoMedico(String id)
+    {
+        var medico = feignMedico.getById(id);
+        return medico.getAgendamento();
     }
 
-    public List<Relatorio> allConsultas(String nomePac ){
-        return repo.findAll();
+    public List<Paciente> getRelatorioPacientes()
+    {
+        return feignPaciente.getAll();
     }
-    
+
+    public List<Consulta> getConsultasPaciente(String id)
+    {
+        var paciente = feignPaciente.getById(id);
+        return paciente.getConsulta();
+    }
 
 }

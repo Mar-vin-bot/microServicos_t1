@@ -23,37 +23,33 @@ public class AgendamentoContoller {
     AgendamentoService service;
 
     @GetMapping(value="/{id}")
-    public Agendamento getAgendamentoById(@PathVariable String id){
+    public Agendamento getById(@PathVariable String id){
         return service.findById(id).orElseThrow(() -> new AgendamentoNotFoundException(id));
     }
 
     @GetMapping
-    public List <Agendamento> getAllAgendamentos(){
+    public List <Agendamento> getAll(){
         return service.findAll();
     }
 
     @PostMapping
-    public Agendamento createNewAgendamento(@RequestBody Agendamento obj){
+    public Agendamento create(@RequestBody Agendamento obj){
         return service.newAgendamento(obj); 
     }
 
     @PutMapping
-    public Agendamento updateAgendamento (@RequestBody Agendamento agendamento){
+    public Agendamento update (@RequestBody Agendamento agendamento){
         return service.update(agendamento);
     }
 
     @PutMapping("/id")
-    public Agendamento updateAgendamento (String id, Agendamento obj){
+    public Agendamento update (String id, Agendamento obj){
         return service.upAgendamento(id, obj);
     }
 
     @DeleteMapping("/{id}")
-    public void delAgendamentoById(@PathVariable String id){
+    public void deleleteById(@PathVariable String id){
         service.delAgendamento(id);
     }
 
-
-
-    
-    
 }

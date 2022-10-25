@@ -8,7 +8,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import com.saude_mais.ms_gerenciamento.entities.Secretaria;
 import com.saude_mais.ms_gerenciamento.repositorie.SecretariaRepo;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SecretariaService {
 
     @Autowired
