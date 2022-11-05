@@ -13,5 +13,8 @@ public interface ConsultaRepo extends MongoRepository <Consulta, String> {
 
     @Query("{nomePac: ?0}")
     public List<Consulta> getConsultaByPaciente(String nomePac);
+
+    @Query("{nomeMed: ?0")
+    public List<Consulta> getConsultaByMedico(String nomeMed);
     
 }

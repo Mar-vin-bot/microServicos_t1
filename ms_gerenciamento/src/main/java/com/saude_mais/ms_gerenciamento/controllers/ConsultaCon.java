@@ -39,6 +39,11 @@ public class ConsultaCon {
         return service.findByPacienteName(name);
     }
 
+    @GetMapping(value="/medico-name/{name}")
+    public List<Consulta> getByMedicoName(@PathVariable String name){
+        return service.findByMedicoName(name);
+    }
+
     @PostMapping
     public Consulta createNewObj(@RequestBody Consulta obj){
         return service.newConsulta(obj); 

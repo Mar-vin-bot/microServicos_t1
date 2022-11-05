@@ -27,6 +27,10 @@ public class ConsultaService {
         return repo.getConsultaByPaciente(name);
     }
 
+    public List<Consulta> findByMedicoName(String name){
+        return repo.getConsultaByMedico(name);
+    }
+
     public Consulta newConsulta (Consulta obj){
         return repo.save(obj);
     }
