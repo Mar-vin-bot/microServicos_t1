@@ -19,4 +19,7 @@ public interface ConsultaFeign {
 
     @RequestMapping(method = RequestMethod.GET, value = "/consulta/paciente-name/{name}")
     public List<Consulta> getByPacienteName(@PathVariable String name);
+
+    @RequestMapping(method = RequestMethod.GET, value = "/consulta/medico-name/{name}")
+    public List<Consulta> getByMedicoName(@PathVariable String name);
 }
