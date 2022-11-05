@@ -30,8 +30,13 @@ public class ConsultaCon {
     }
 
     @GetMapping
-    public List <Consulta> getAllObjetos(){
+    public List <Consulta> getAll(){
         return service.findAll();
+    }
+
+    @GetMapping(value="/paciente-name/{name}")
+    public List<Consulta> getByPacienteName(@PathVariable String name){
+        return service.findByPacienteName(name);
     }
 
     @PostMapping

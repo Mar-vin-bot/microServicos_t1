@@ -24,7 +24,7 @@ public class ConsultaController {
     @GetMapping(value="{id}")
     public Consulta getById(@PathVariable String id) 
     {
-        return service.findById(id).orElseThrow(() -> new ConsultaNotFoundException(id));
+        return service.findById(id);
     }
 
     @GetMapping
@@ -32,6 +32,10 @@ public class ConsultaController {
     {
         return service.findAll();
     }
-    
-    
+
+    @GetMapping(value="/paciente-name/{name}")
+    public List<Consulta> getByPacienteName(@PathVariable String name)
+    {
+        return service.findByPacienteName(name);
+    }
 }

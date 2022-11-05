@@ -1,11 +1,10 @@
 package com.saude_mais.ms_consulta.Service;
 
+import com.netflix.discovery.converters.Auto;
+import com.saude_mais.ms_consulta.entities.Consulta;
+import com.saude_mais.ms_consulta.feigns.ConsultaFeign;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import com.saude_mais.ms_consulta.Repositorio.ConsultaRepo;
-
-import com.saude_mais.ms_consulta.entities.Consulta;
 
 import java.util.List;
 import java.util.Optional;
@@ -14,14 +13,18 @@ import java.util.Optional;
 public class ConsultaService {
 
     @Autowired
-    ConsultaRepo repo;
+    ConsultaFeign consultaFeign;
 
     public List<Consulta> findAll(){
-        return repo.findAll();
+        return consultaFeign.getAll();
     }
 
-    public Optional<Consulta> findById(String id){
-        return repo.findById(id);
+    public Consulta findById(String id){
+        return consultaFeign.getById(id);
+    }
+
+    public List<Consulta> findByPacienteName(String name){
+        return consultaFeign.getByPacienteName(name);
     }
 
     //futuras funcoes att consulta:  em caso de erro de digitação
