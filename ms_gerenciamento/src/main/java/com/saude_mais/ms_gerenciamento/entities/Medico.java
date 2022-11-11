@@ -20,5 +20,5 @@ public class Medico {
     private String crm;
     private String especialidade;
     private String turnoAtendimento;
-    
+        
 }
