@@ -1,9 +1,15 @@
 package com.maisaude.Log;
 
+import org.springframework.amqp.rabbit.annotation.EnableRabbit;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
+import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
 
-@SpringBootApplication
+
+@EnableRabbit
+@EnableMongoRepositories
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class LogApplication {
 
 	public static void main(String[] args) {

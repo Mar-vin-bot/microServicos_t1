@@ -15,7 +15,7 @@ public class LogMenssager {
     @Autowired
     private LogService service;
 
-    @RabbitListener(queues = {"${store.rabbitmq.Log.log.queue}"})
+    @RabbitListener(queues = "store.queue")
     public void receive(@Payload Log obj) {
         service.save(obj);
     }
