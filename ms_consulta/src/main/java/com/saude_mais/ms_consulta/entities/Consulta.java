@@ -13,5 +13,6 @@ public class Consulta {
     private String nomePac;
     private String nomeMed;
     private String dtColsulta;
+    private Action action = Action.NONE;
     
 }
