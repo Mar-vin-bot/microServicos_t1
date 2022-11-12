@@ -14,7 +14,8 @@ public class ConsultaSendMenssageLog {
     @Value("${store.rabbitmq.exchange}")
     String exchange;
 
-    @Value("${store.routingkey}")
+    //@Value("${store.routingkey}")
+    @Value("store.routingkey")
     String routingKey;
 
     @Autowired
@@ -29,7 +30,7 @@ public class ConsultaSendMenssageLog {
         obj.setNomeMed(consulta.getNomeMed());
         obj.setDtColsulta(consulta.getDtColsulta());
 
-        rabbitTemplate.convertAndSend(exchange, routingKey, consulta);
+        rabbitTemplate.convertAndSend(exchange, routingKey, obj);
 
     }
 
