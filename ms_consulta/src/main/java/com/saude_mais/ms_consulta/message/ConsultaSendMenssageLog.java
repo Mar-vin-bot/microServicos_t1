@@ -14,8 +14,7 @@ public class ConsultaSendMenssageLog {
     @Value("${store.rabbitmq.exchange}")
     String exchange;
 
-    //@Value("${store.routingkey}")
-    @Value("store.routingkey")
+    @Value("${store.rabbitmq.log.routingkey}")
     String routingKey;
 
     @Autowired

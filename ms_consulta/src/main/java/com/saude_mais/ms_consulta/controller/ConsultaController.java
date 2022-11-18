@@ -21,7 +21,7 @@ public class ConsultaController {
     @Autowired
     private ConsultaService service;
 
-    @GetMapping(value="{id}")
+    @GetMapping(value="/{id}")
     public Consulta getById(@PathVariable String id) 
     {
         return service.findById(id);
