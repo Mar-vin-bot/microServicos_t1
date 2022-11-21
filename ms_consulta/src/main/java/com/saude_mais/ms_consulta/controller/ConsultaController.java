@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 
 @RestController
-@RequestMapping("/contulta")
+@RequestMapping("/consulta")
 public class ConsultaController {
 
     @Autowired

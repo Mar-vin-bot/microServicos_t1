@@ -1,7 +1,5 @@
 package com.saude_mais.ms_agendamento.entities;
 
-import java.util.Date;
-
 import javax.persistence.Id;
 
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -17,12 +15,12 @@ import lombok.NoArgsConstructor;
 
 public class Agendamento {
 
-@Id
-private String id;
-private String idPac;
-private String dataConsulta;
-private String nomeMedico;
-private String especialidadeMedico;
-
+    @Id
+    private String id;
+    private String idPac;
+    private String dataConsulta;
+    private String nomeMedico;
+    private String especialidadeMedico;
+    private Action action = Action.NONE;
 
 }

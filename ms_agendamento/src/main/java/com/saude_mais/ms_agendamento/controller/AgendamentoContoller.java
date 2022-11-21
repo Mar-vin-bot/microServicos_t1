@@ -16,7 +16,7 @@ import com.saude_mais.ms_agendamento.entities.Agendamento;
 import java.util.List;
 
 @RestController
-@RequestMapping("/agendamentos")
+@RequestMapping("/agendamento")
 public class AgendamentoContoller {
 
     @Autowired
