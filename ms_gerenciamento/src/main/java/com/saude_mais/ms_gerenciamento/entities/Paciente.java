@@ -23,5 +23,6 @@ public class Paciente  {
     private String dtNasci;
     private String ocupacao;
     private List <Consulta> consulta;
+    private Action action = Action.NONE;
     
 }

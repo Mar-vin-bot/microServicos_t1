@@ -20,5 +20,6 @@ public class Secretaria {
     private String cpf;
     private String dtNasci;
     private String dtAdm;
+    private Action action = Action.NONE;
     
 }
